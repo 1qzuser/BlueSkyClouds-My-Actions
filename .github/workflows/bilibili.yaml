@@ -21,14 +21,9 @@ jobs:
           python-version: 3.8
 
       - name: "安装依赖包"
-        run: pip install -r ./requirements.txt
-
-      - name: "Print installed packages"
         run: |
-          python -m pip freeze
-
-      - name: "安装 chardet"
-        run: pip install chardet
+          pip install -r ./requirements.txt
+          pip install chardet
 
       - name: "运行 哔哩哔哩签到"
         run: python3 function/bilibili/bilibili.py
