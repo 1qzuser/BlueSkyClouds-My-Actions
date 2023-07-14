@@ -23,6 +23,10 @@ jobs:
       - name: "安装依赖包"
         run: pip install -r ./requirements.txt
 
+      - name: "Print installed packages"
+        run: |
+          python -m pip freeze
+
       - name: "安装 chardet"
         run: pip install chardet
 
